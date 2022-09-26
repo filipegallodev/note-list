@@ -25,7 +25,7 @@ function criarNota() {
 
   notaSalvaItemConteudo.innerText = notaEscrita.value;
 
-  excluirNota.src = '../img/excluir.png';
+  excluirNota.src = 'https://filipegallodev.github.io/to-do-list/img/excluir.png';
   excluirNota.classList.add('excluir-nota');
 
   notaSalvaItem.classList.add('nota-item');
