@@ -5,11 +5,36 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+
   <title>To Do List</title>
 </head>
 
 <body>
+  <header>
+    <h1>Bem-vindo ao To Do List</h1>
+  </header>
 
+  <main>
+    <section>
+      <div class="to-do-list-container">
+        <div class="escrever-nota-container">
+          <h2>Digite sua nota</h2>
+          <textarea class="nota-escrita" cols="60" rows="5" autofocus></textarea>
+          <button class="botao-salvar">Salvar</button>
+        </div>
+
+        <div class="notas-salvas-container">
+          <h2>Notas salvas</h2>
+          <div class="nota-salva"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="scripts/script.js"></script>
 </body>
 
 </html>
