@@ -1,27 +1,54 @@
-const botaoSalvar = document.querySelector('.botao-salvar');
-
 function salvarNota() {
   const notaEscrita = document.querySelector('.nota-escrita');
-  const notasSalvas = document.querySelector('.notas-salvas');
-  
+
   if (notaEscrita.value === '') {
-    alert('Você não pode salvar uma nota vazia!\n\nTente escrever algo antes =D')
+    alert('Você não pode salvar uma nota vazia!\n\nTente escrever algo antes =D');
   }
   else {
-    const notaSalvaItem = document.createElement('div');
-    const notaSalvaItemConteudo = document.createElement('p');
-    const excluirNota = document.createElement('img');
-    
-    notaSalvaItemConteudo.innerText = notaEscrita.value;
-    excluirNota.src = '../img/icons8-lixo.svg';
-    notaSalvaItem.classList.add('nota-item');
-    notaSalvaItem.appendChild(notaSalvaItemConteudo);
-    notaSalvaItem.appendChild(excluirNota);
-    notasSalvas.appendChild(notaSalvaItem);
-    
+    criarNota();
+
     notaEscrita.value = '';
+
+    botaoExcluir();
   }
+
   notaEscrita.focus();
 }
 
-botaoSalvar.addEventListener('click', () => salvarNota());
+function criarNota() {
+  const notaEscrita = document.querySelector('.nota-escrita');
+  const notasSalvas = document.querySelector('.notas-salvas');
+
+  const notaSalvaItem = document.createElement('div');
+  const notaSalvaItemConteudo = document.createElement('p');
+  const excluirNota = document.createElement('img');
+
+  notaSalvaItemConteudo.innerText = notaEscrita.value;
+
+  excluirNota.src = '../img/icons8-lixo.svg';
+  excluirNota.classList.add('excluir-nota');
+
+  notaSalvaItem.classList.add('nota-item');
+
+  notaSalvaItem.appendChild(notaSalvaItemConteudo);
+  notaSalvaItem.appendChild(excluirNota);
+  notasSalvas.appendChild(notaSalvaItem);
+}
+
+function botaoExcluir() {
+  const excluir = document.querySelectorAll('.excluir-nota');
+
+  excluir.forEach((item) => {
+    item.addEventListener('click', (event) => excluirNota(event))
+  });
+}
+
+function excluirNota(event) {
+  event.target.closest('div').remove();
+}
+
+const botaoSalvar = document.querySelector('.botao-salvar');
+
+document.addEventListener('click', botaoExcluir);
+
+botaoSalvar.addEventListener('click', salvarNota);
