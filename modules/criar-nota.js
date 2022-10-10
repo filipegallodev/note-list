@@ -36,9 +36,11 @@ export function criarNota(notaTexto) {
   notaSalvaItem.appendChild(notaSalvaItemConteudo);
   notaSalvaItem.appendChild(excluirNota);
   notasSalvas.appendChild(notaSalvaItem);
+
+  botaoExcluir();
 }
 
-export function botaoExcluir() {
+function botaoExcluir() {
   const excluir = document.querySelectorAll(".excluir-nota");
 
   excluir.forEach((item) => {
