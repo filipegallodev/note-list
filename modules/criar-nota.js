@@ -27,7 +27,7 @@ export function criarNota(notaTexto) {
 
   notaSalvaItemConteudo.innerText = notaTexto;
 
-  excluirNota.src = "../img/excluir.png";
+  excluirNota.src = "https://i.imgur.com/Js5xgWN.png";
   excluirNota.alt = "Excluir";
   excluirNota.classList.add("excluir-nota");
 
