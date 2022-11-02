@@ -1,12 +1,11 @@
-import {
-  salvarNotasNoLocalStorage,
-  lerNotasDoLocalStorage,
-} from "./local-storage.js";
+import NotasArmazenadas from "./notas-armazenadas.js";
+
+const notasArmazenadas = new NotasArmazenadas(".nota-item p");
 
 function excluirNota(event) {
   event.target.closest("div").remove();
 
-  salvarNotasNoLocalStorage();
+  notasArmazenadas.salvarNoLocalStorage();
 }
 
 function botaoExcluir() {
@@ -51,11 +50,13 @@ export function salvarNota() {
 
     notaEscrita.value = "";
 
-    salvarNotasNoLocalStorage();
+    notasArmazenadas.salvarNoLocalStorage();
   }
 
   notaEscrita.focus();
 }
 
-const textoNotasArray = lerNotasDoLocalStorage();
-textoNotasArray.forEach((item) => criarNota(item));
+const notasTextosArray = notasArmazenadas.lerDoLocalStorage();
+if (notasTextosArray !== null) {
+  notasTextosArray.forEach((item) => criarNota(item));
+}
