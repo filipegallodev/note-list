@@ -1,0 +1,23 @@
+{
+  "name": "to-do-list",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filipegallodev/to-do-list.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/filipegallodev/to-do-list/issues"
+  },
+  "homepage": "https://github.com/filipegallodev/to-do-list#readme",
+  "devDependencies": {
+    "eslint": "^8.26.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0"
+  }
+}
