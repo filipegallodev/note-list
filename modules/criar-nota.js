@@ -21,12 +21,11 @@ export function criarNota(notaTexto) {
 
   const notaSalvaItem = document.createElement("div");
   const notaSalvaItemConteudo = document.createElement("p");
-  const botaoExcluirNota = document.createElement("img");
+  const botaoExcluirNota = document.createElement("div");
 
   notaSalvaItemConteudo.innerText = notaTexto;
-
-  botaoExcluirNota.src = "../img/excluir.svg";
-  botaoExcluirNota.alt = "Excluir";
+  
+  botaoExcluirNota.innerText = "X";
   botaoExcluirNota.classList.add("excluir-nota");
 
   notaSalvaItem.classList.add("nota-item");
