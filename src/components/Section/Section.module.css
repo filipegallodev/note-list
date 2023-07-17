@@ -17,3 +17,9 @@
     margin: 64px 24px;
   }
 }
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 2rem;
+  }
+}
