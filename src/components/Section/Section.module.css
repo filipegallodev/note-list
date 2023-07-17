@@ -1,6 +1,5 @@
 .section {
   max-width: 1200px;
-  width: 100%;
   margin: 64px auto;
 }
 
@@ -11,4 +10,10 @@
   font-weight: 500;
   color: #fff;
   padding: 16px;
+}
+
+@media (max-width: 1210px) {
+  .section {
+    margin: 64px 24px;
+  }
 }
