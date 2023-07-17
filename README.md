@@ -1,6 +1,6 @@
 # 📒 Lista de Notas
 
-![Lista de Notas Cover](https://i.imgur.com/RdcSDO5.png)
+![Lista de Notas Cover](https://i.imgur.com/E0w9MXL.png)
 
 ## 🎯 Objetivo
 
