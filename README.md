@@ -4,12 +4,13 @@
 
 ## 🎯 Objetivo
 
-Criação de uma aplicação WEB para que seja possível escrever e salvar suas notas
+Criação de uma aplicação WEB para que seja possível escrever e salvar suas notas.
 
 ## ⚙️ Funcionalidades
 
 - Salvar e excluir notas
 - Armazenamento local das notas salvas
+- Mais em breve...
 
 ## 🔗 Link para teste
 
