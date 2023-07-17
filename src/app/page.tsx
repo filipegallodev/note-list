@@ -7,16 +7,7 @@ import NoteCreate from "@/components/Note/NoteCreate";
 import NoteList from "@/components/Note/NoteList";
 import { getNotesFromLocalStorage } from "@/helpers/localStorage";
 import Footer from "@/components/Footer/Footer";
-
-interface IContext {
-  notes: Note[] | null;
-  setNotes: React.Dispatch<React.SetStateAction<any>> | null;
-}
-
-export const NotesContext = React.createContext<IContext>({
-  notes: null,
-  setNotes: null,
-});
+import { NotesContext } from "@/Context";
 
 export default function Home() {
   const [notes, setNotes] = useState<Note[] | null>(getNotesFromLocalStorage());
