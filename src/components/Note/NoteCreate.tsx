@@ -5,7 +5,7 @@ import {
   getNotesFromLocalStorage,
   saveNotesOnLocalStorage,
 } from "@/helpers/localStorage";
-import { NotesContext } from "@/app/page";
+import { NotesContext } from "@/Context";
 
 const NoteCreate = () => {
   const [newNote, setNewNote] = useState<string>("");

@@ -6,7 +6,7 @@ import {
   getNotesFromLocalStorage,
   saveNotesOnLocalStorage,
 } from "@/helpers/localStorage";
-import { NotesContext } from "@/app/page";
+import { NotesContext } from "@/Context";
 
 const NoteCard = ({ content, index }: { content: string; index: number }) => {
   const context = useContext(NotesContext);

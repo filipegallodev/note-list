@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import styles from "./NoteList.module.css";
 import Section from "../Section/Section";
 import NoteCard from "./NoteCard";
-import { NotesContext } from "@/app/page";
+import { NotesContext } from "@/Context";
 
 const NoteList = () => {
   const context = useContext(NotesContext);
