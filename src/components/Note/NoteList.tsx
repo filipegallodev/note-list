@@ -12,7 +12,7 @@ const NoteList = () => {
       <div>
         {context.notes && context.notes.length >= 1 ? (
           <ul className={styles.list}>
-            {context.notes.map((note, index) => (
+            {context.notes.reverse().map((note, index) => (
               <NoteCard key={index} content={note.content} index={index} />
             ))}
           </ul>
