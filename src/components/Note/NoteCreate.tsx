@@ -16,7 +16,7 @@ const NoteCreate = () => {
     if (!newNoteInfo) return;
     let notes = getNotesFromLocalStorage();
     if (notes) {
-      notes.push(newNoteInfo);
+      notes.unshift(newNoteInfo);
     } else {
       notes = [newNoteInfo];
     }
